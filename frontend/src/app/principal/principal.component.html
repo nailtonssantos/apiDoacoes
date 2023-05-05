@@ -39,12 +39,18 @@
             <th>#</th>
             <th>Nome</th>
             <th>Medida</th>
-            <th>Forma de Entrega</th>
+            <th>Entrega</th>
             <th>Tipo</th>
             <th>Selecionar</th>
         </tr>
     </thead>
-    <tbody>
-
+    <tbody> 
+        <tr *ngFor="let p of produtos">
+            <td></td>
+            <td>{{p.nome}}</td>
+            <td>Teste</td>
+            <td></td>
+            <td></td>
+        </tr>
     </tbody>
 </table>
