@@ -17,3 +17,11 @@ input{
 input[type="button"]{
     margin-right: 5px;
 }
+
+select{
+    margin-bottom: 5px;
+}
+
+table{
+    margin: 5% auto 10% auto;
+}

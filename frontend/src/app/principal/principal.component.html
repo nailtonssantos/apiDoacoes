@@ -2,12 +2,49 @@
     <img src="assets/cesta-de-produtos.png">
 
     <input type="text" class="form-control" placeholder="Nome do Produto">
-    <input type="text" class="form-control" placeholder="Sigla de Medida">
-    <input type="text" class="form-control" placeholder="Forma de Entrega">
-    <input type="text" class="form-control" placeholder="Tipo de Produto">
+    <select class="form-select" id="medida" name="medida">
+        <option value="">Unidade de Medida...</option>
+        <option value="KG">KG</option>
+        <option value="L">L</option>
+        <option value="UN">UN</option>
+        <option value="M">M</option>
+    </select>
+    <select class="form-select" id="formaEntrega" name="formaEntrega">
+        <option value="">Forma de Entrega...</option>
+        <option value="caixa">Caixa</option>
+        <option value="fardo">Fardo</option>
+        <option value="pacote">Pacote</option>
+        <option value="rolo">Rolo</option>
+    </select>
+    <select class="form-select" id="tipoProduto" name="tipoProduto">
+        <option value="">Tipo de Produto...</option>
+        <option value="fruta">Fruta</option>
+        <option value="alimento">Alimento</option>
+        <option value="bebida">Bebida</option>
+        <option value="higiene pessoal">Higiene Pessoal</option>
+        <option value="limpeza">Limpeza</option>
+        <option value="roupas">Roupas</option>
+        <option value="calcados">Calçados</option>
+    </select>
 
     <input type="button" class="btn btn-success" value="Cadastrar">
     <input type="button" class="btn btn-warning" value="Alterar">
     <input type="button" class="btn btn-danger" value="Remover">
     <input type="button" class="btn btn-secondary" value="Cancelar">
 </form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Nome</th>
+            <th>Medida</th>
+            <th>Forma de Entrega</th>
+            <th>Tipo</th>
+            <th>Selecionar</th>
+        </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
