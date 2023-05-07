@@ -1,3 +1,7 @@
+body{
+    margin-left: 50%;
+}
+
 img{
     width: 250px;
     margin-bottom: 30px;
@@ -23,5 +27,10 @@ select{
 }
 
 table{
-    margin: 5% auto 10% auto;
+    margin: 5% auto 10% 2%;
+}
+
+.contagem{
+    margin-bottom: 2%;
+    margin-left: 2%;
 }

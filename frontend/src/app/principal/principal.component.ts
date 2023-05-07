@@ -9,6 +9,9 @@ import { Produto } from '../model/ProdutoModel';
 })
 export class PrincipalComponent {
 
+  //Objeto do tipo Produto
+  produto = new Produto();
+
   //Variável para visibilidade dos botões
   btnCadastro:boolean = true;
 
@@ -16,18 +19,15 @@ export class PrincipalComponent {
   produtos:Produto[] = [];
 
   //Constructor
-  constructor(private servico:ProdutoService){}
+  constructor(private service:ProdutoService){}
 
   //Método de Seleção
   selecionar():void{
-    this.servico.selecionar().subscribe(retorno => this.produtos = retorno);
+    this.service.selecionar()
+    .subscribe(retorno => this.produtos = retorno);
   }
 
   //Método de Inicialização
-  //ngOnInit(){//Nativo so Angular
-   // this.servico.selecionar();
- // }
-
  ngOnInit(){
     this.selecionar();
  }

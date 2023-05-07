@@ -9,11 +9,11 @@ import { Produto } from '../model/ProdutoModel';
 export class ProdutoService {
 
   //Url da Api
-  private url:string = 'http://localhost:8090';
+  private url:string = 'http://localhost:8090/api/produtos';
 
   constructor(private http:HttpClient) { }
 
-  //Método para selecionar todos os clientes
+  //Método para selecionar todos os Produtos
   selecionar():Observable<Produto[]>{
     return this.http.get<Produto[]>(this.url)
   }

@@ -1,22 +1,22 @@
 <form>
     <img src="assets/cesta-de-produtos.png">
 
-    <input type="text" class="form-control" placeholder="Nome do Produto">
-    <select class="form-select" id="medida" name="medida">
+    <input type="text" class="form-control" placeholder="Nome do Produto" name="nome" [(ngModel)]="produto.nome">
+    <select class="form-select" id="medida" name="medida" [(ngModel)]="produto.medida">
         <option value="" disabled selected>Unidade de Medida...</option>
         <option value="KG">KG</option>
         <option value="L">L</option>
         <option value="UN">UN</option>
         <option value="M">M</option>
     </select>
-    <select class="form-select" id="formaEntrega" name="formaEntrega">
+    <select class="form-select" id="formaEntrega" name="formaEntrega" [(ngModel)]="produto.formaEntrega">
         <option value="" disabled selected>Forma de Entrega...</option>
         <option value="caixa">Caixa</option>
         <option value="fardo">Fardo</option>
         <option value="pacote">Pacote</option>
         <option value="rolo">Rolo</option>
     </select>
-    <select class="form-select" id="tipoProduto" name="tipoProduto">
+    <select class="form-select" id="tipoProduto" name="tipoProduto" [(ngModel)]="produto.tipo">
         <option value="" disabled selected>Tipo de Produto...</option>
         <option value="fruta">Fruta</option>
         <option value="alimento">Alimento</option>
@@ -33,6 +33,8 @@
     <input type="button" class="btn btn-secondary" value="Cancelar" *ngIf="!btnCadastro">
 </form>
 
+<h3>{{produto | json}}</h3>
+
 <table class="table">
     <thead>
         <tr>
@@ -41,16 +43,23 @@
             <th>Medida</th>
             <th>Entrega</th>
             <th>Tipo</th>
+            <th>Quantidade</th>
             <th>Selecionar</th>
         </tr>
     </thead>
     <tbody> 
         <tr *ngFor="let p of produtos">
-            <td></td>
+            <td>{{p.codigo}}</td>
             <td>{{p.nome}}</td>
-            <td>Teste</td>
-            <td></td>
-            <td></td>
+            <td>{{p.medida}}</td>
+            <td>{{p.formaEntrega}}</td>
+            <td>{{p.tipo}}</td>
+            <td>{{p.quantidade}}</td>
+            <td><button class="btn btn-primary">Selecionar</button></td>
         </tr>
     </tbody>
 </table>
+
+<div>
+    <h5 class="contagem">Total de cadastros: #</h5>
+</div>
