@@ -54,10 +54,6 @@ public class ProdutoModel {
 	@Size(min = 3, max = 20)
 	private String tipo;
 
-	@Column(name = "quantidade")
-	@Size(min = 1, max = 10)
-	private int quantidade = 0;
-
 	@Column(name = "ativo")
 	private boolean ativo = true;
 
@@ -117,14 +113,6 @@ public class ProdutoModel {
 
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
-	}
-
-	public int getQuantidade() {
-		return quantidade;
-	}
-
-	public void setQuantidade(int quantidade) {
-		this.quantidade = quantidade;
 	}
 
 	public Timestamp getCreatedAt() {

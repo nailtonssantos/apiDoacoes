@@ -17,4 +17,9 @@ export class ProdutoService {
   selecionar():Observable<Produto[]>{
     return this.http.get<Produto[]>(this.url)
   }
+
+  //Método para cadastrar produtos
+  cadastrar(obj:Produto):Observable<Produto>{
+    return this.http.post<Produto>(this.url, obj);
+  }
 }

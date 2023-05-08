@@ -27,6 +27,17 @@ export class PrincipalComponent {
     .subscribe(retorno => this.produtos = retorno);
   }
 
+  //Método de Cadastro
+  cadastrar():void{
+    this.service.cadastrar(this.produto)
+    .subscribe(retorno => { this.produtos.push(retorno); });
+    this.load();
+  }
+
+  load() {
+    location.reload()
+  }
+
   //Método de Inicialização
  ngOnInit(){
     this.selecionar();

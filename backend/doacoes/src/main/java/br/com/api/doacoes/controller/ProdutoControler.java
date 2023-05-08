@@ -21,9 +21,8 @@ import br.com.api.doacoes.services.ProdutoServices;
 import jakarta.validation.Valid;
 
 @RestController
-@CrossOrigin(origins = "*")
 @RequestMapping("/api")
-
+@CrossOrigin(origins = "*")
 public class ProdutoControler {
 
     // ***** Disponibilizar um objeto do tipo Mensagem
