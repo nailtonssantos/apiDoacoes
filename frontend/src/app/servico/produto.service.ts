@@ -22,4 +22,9 @@ export class ProdutoService {
   cadastrar(obj:Produto):Observable<Produto>{
     return this.http.post<Produto>(this.url, obj);
   }
+
+  //Método para editar produtos
+  editar(obj:Produto):Observable<Produto>{
+    return this.http.put<Produto>(this.url, obj);
+  }
 }

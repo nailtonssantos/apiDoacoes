@@ -34,7 +34,7 @@
     <input type="button" class="btn btn-secondary" value="Cancelar" *ngIf="!btnCadastro">
 </form>
 
-<table class="table">
+<table class="table" *ngIf="tabela">
     <thead>
         <tr>
             <th>#</th>
@@ -46,17 +46,17 @@
         </tr>
     </thead>
     <tbody> 
-        <tr *ngFor="let p of produtos">
-            <td>{{p.codigo}}</td>
+        <tr *ngFor="let p of produtos; index as i">
+            <td>{{i+1}}</td>
             <td>{{p.nome}}</td>
             <td>{{p.medida}}</td>
             <td>{{p.formaEntrega}}</td>
             <td>{{p.tipo}}</td>
-            <td><button class="btn btn-primary">Selecionar</button></td>
+            <td><button class="btn btn-primary" (click)="selecionarProduto(i)">Selecionar</button></td>
         </tr>
     </tbody>
 </table>
 
-<div>
+<div *ngIf="contCadastros">
     <h5 class="contagem">Total de cadastros: #</h5>
 </div>

@@ -37,16 +37,19 @@ public class ProdutoControler {
 
     @PostMapping("/produtos")
     public ResponseEntity<?> cadastrarProdutos(@Valid @RequestBody ProdutoModel produto){
-        acao.save(produto);
-        mensagem.setMensagem("Produto Cadastrado com sucesso!");
-        return new ResponseEntity<>(mensagem, HttpStatus.OK);
+        /*acao.save(produto);
+          mensagem.setMensagem("Produto Cadastrado com sucesso!");
+          return new ResponseEntity<>(mensagem, HttpStatus.OK);*/
+        
+        return new ResponseEntity<>(acao.save(produto), HttpStatus.OK);
     }
 
     @PutMapping("/produtos")
     public ResponseEntity<?> alterarProdutos(@Valid @RequestBody ProdutoModel produto){
-        acao.save(produto);
+        /*acao.save(produto);
         mensagem.setMensagem("Produto Alterado com sucesso!");
-        return new ResponseEntity<>(mensagem, HttpStatus.OK);
+        return new ResponseEntity<>(mensagem, HttpStatus.OK);*/
+        return new ResponseEntity<>(acao.save(produto), HttpStatus.OK);
     }
 
     @DeleteMapping("/produtos/{codigo}")

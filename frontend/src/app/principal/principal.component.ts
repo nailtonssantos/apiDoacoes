@@ -15,6 +15,12 @@ export class PrincipalComponent {
   //Variável para visibilidade dos botões
   btnCadastro:boolean = true;
 
+  //Variável de contagem de cadastros
+  contCadastros:boolean = true
+
+  // Variável para visibilidade da tabela
+  tabela:boolean = true;
+
   //JSON de Produtos
   produtos:Produto[] = [];
 
@@ -30,10 +36,38 @@ export class PrincipalComponent {
   //Método de Cadastro
   cadastrar():void{
     this.service.cadastrar(this.produto)
-    .subscribe(retorno => { this.produtos.push(retorno); });
-    this.load();
+    .subscribe(retorno => { 
+      
+      //Cadastrar o cliente no vetor
+      this.produtos.push(retorno); });
+
+      //Limpar o Formulário
+      this.produto = new Produto();
+
+      //Mensagem
+      alert('Produto cadastrado com Sucesso!')
+
+    //this.load();
   }
 
+  //Método para selecionar um produto específico
+  selecionarProduto(codProduto:number):void{
+
+    //Selecionar produto no vetor
+    this.produto = this.produtos[codProduto];
+
+    //Visibilidade dos botões
+    this.btnCadastro = false;
+
+    //Visibilidade da tabela
+    this.tabela = false;
+
+    //Visibilidade da contagem de cadastros
+    this.contCadastros = false;
+
+  }
+
+  //Método para recarregar a página
   load() {
     location.reload()
   }
