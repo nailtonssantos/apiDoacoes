@@ -27,4 +27,9 @@ export class ProdutoService {
   editar(obj:Produto):Observable<Produto>{
     return this.http.put<Produto>(this.url, obj);
   }
+
+  //Método para remover produtos
+  remover(codigo:number):Observable<void>{
+    return this.http.delete<void>(this.url + '/' + codigo);
+  }
 }

@@ -29,12 +29,12 @@
     </select>
 
     <input type="button" class="btn btn-success" value="Cadastrar" *ngIf="btnCadastro" (click)="cadastrar()">
-    <input type="button" class="btn btn-warning" value="Alterar" *ngIf="!btnCadastro">
-    <input type="button" class="btn btn-danger" value="Remover" *ngIf="!btnCadastro">
+    <input type="button" class="btn btn-warning" value="Alterar" *ngIf="!btnCadastro" (click)="editar()">
+    <input type="button" class="btn btn-danger" value="Remover" *ngIf="!btnCadastro" (click)="confirmaExclusao()">
     <input type="button" class="btn btn-secondary" value="Cancelar" *ngIf="!btnCadastro">
 </form>
 
-<table class="table" *ngIf="tabela">
+<table class="table" *ngIf="tabelaProdutos">
     <thead>
         <tr>
             <th>#</th>

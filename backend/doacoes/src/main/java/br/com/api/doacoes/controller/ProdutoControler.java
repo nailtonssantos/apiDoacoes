@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.api.doacoes.model.Mensagem;
 import br.com.api.doacoes.model.ProdutoModel;
 import br.com.api.doacoes.repository.ProdutoRepository;
 import br.com.api.doacoes.services.ProdutoServices;
@@ -25,9 +24,9 @@ import jakarta.validation.Valid;
 @CrossOrigin(origins = "*")
 public class ProdutoControler {
 
-    // ***** Disponibilizar um objeto do tipo Mensagem
+    /* Disponibilizar um objeto do tipo Mensagem
     @Autowired
-    private Mensagem mensagem;
+    private Mensagem mensagem;*/
     
     @Autowired
     private ProdutoRepository acao;
