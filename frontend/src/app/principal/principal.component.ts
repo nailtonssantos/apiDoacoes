@@ -47,6 +47,7 @@ export class PrincipalComponent {
       //Mensagem
       alert('Produto cadastrado com Sucesso!')
 
+    //this.load();
   }
 
   //Método para editar um produto
@@ -112,6 +113,21 @@ export class PrincipalComponent {
     });
   }
 
+  //Método para cancelar
+  cancelar():void{
+    //Limpar o formulário
+    this.produto = new Produto();
+
+    //Visibilidade dos botões
+    this.btnCadastro = true;
+
+    //Visibiilidade da Tabela de Produtos
+    this.tabelaProdutos = true;
+
+    //Visibilidade da contagem
+    this.contCadastros = true;
+  }
+
 
   //Método para selecionar um produto específico
   selecionarProduto(posicao:number):void{
@@ -128,6 +144,11 @@ export class PrincipalComponent {
     //Visibilidade da contagem de cadastros
     this.contCadastros = false;
 
+  }
+
+  //Método para recarregar a página
+  load() {
+    location.reload()
   }
 
   //Função para confirmar exclusão
