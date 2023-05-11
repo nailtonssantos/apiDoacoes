@@ -3,11 +3,11 @@ import { ProdutoService } from '../servico/produto.service';
 import { Produto } from '../model/ProdutoModel';
 
 @Component({
-  selector: 'app-principal',
-  templateUrl: './principal.component.html',
-  styleUrls: ['./principal.component.css']
+  selector: 'app-produto',
+  templateUrl: './produto.component.html',
+  styleUrls: ['./produto.component.css']
 })
-export class PrincipalComponent {
+export class ProdutoComponent {
 
   //Objeto do tipo Produto
   produto = new Produto();
