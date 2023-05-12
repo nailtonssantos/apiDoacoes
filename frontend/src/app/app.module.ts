@@ -9,6 +9,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
+import { Error404Component } from './pages/error404/error404.component';
+import { LoginComponent } from './pages/login/login.component';
 
 
 @NgModule({
@@ -16,7 +18,9 @@ import { AboutComponent } from './pages/about/about.component';
     AppComponent,
     ProdutoComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    Error404Component,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
