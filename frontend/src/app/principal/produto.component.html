@@ -1,62 +1,65 @@
-<form>
-    <img src="assets/cesta-de-produtos.png">
+<div class="container-lg flex-row mx-lg-5 justify-content-center align-items-center row">
+    <form class="mx-5 me-xxl-5 justify-content-center align-items-center row">
+        <div class="w-50 justify-content-center align-items-center row">
+            <img src="assets/cesta-de-produtos.png" class="mb-2">
+            <input type="text" class="form-control mb-1" placeholder="Nome do Produto" name="nome" [(ngModel)]="produto.nome">
+            <select class="form-select mb-1" id="medida" name="medida" [(ngModel)]="produto.medida">
+                <option value="" disabled selected>Unidade de Medida...</option>
+                <option value="kg">KG</option>
+                <option value="l">L</option>
+                <option value="un">UN</option>
+                <option value="m">M</option>
+            </select>
+            <select class="form-select mb-1" id="formaEntrega" name="formaEntrega" [(ngModel)]="produto.formaEntrega">
+                <option value="" disabled selected>Forma de Entrega...</option>
+                <option value="caixa">Caixa</option>
+                <option value="fardo">Fardo</option>
+                <option value="pacote">Pacote</option>
+                <option value="rolo">Rolo</option>
+            </select>
+            <select class="form-select mb-1" id="tipoProduto" name="tipoProduto" [(ngModel)]="produto.tipo">
+                <option value="" disabled selected>Tipo de Produto...</option>
+                <option value="fruta">Fruta</option>
+                <option value="alimento">Alimento</option>
+                <option value="bebida">Bebida</option>
+                <option value="higiene pessoal">Higiene Pessoal</option>
+                <option value="limpeza">Limpeza</option>
+                <option value="roupas">Roupas</option>
+                <option value="calcados">Calçados</option>
+                <option value="outros">Outros</option>
+            </select>
 
-    <input type="text" class="form-control" placeholder="Nome do Produto" name="nome" [(ngModel)]="produto.nome">
-    <select class="form-select" id="medida" name="medida" [(ngModel)]="produto.medida">
-        <option value="" disabled selected>Unidade de Medida...</option>
-        <option value="kg">KG</option>
-        <option value="l">L</option>
-        <option value="un">UN</option>
-        <option value="m">M</option>
-    </select>
-    <select class="form-select" id="formaEntrega" name="formaEntrega" [(ngModel)]="produto.formaEntrega">
-        <option value="" disabled selected>Forma de Entrega...</option>
-        <option value="caixa">Caixa</option>
-        <option value="fardo">Fardo</option>
-        <option value="pacote">Pacote</option>
-        <option value="rolo">Rolo</option>
-    </select>
-    <select class="form-select" id="tipoProduto" name="tipoProduto" [(ngModel)]="produto.tipo">
-        <option value="" disabled selected>Tipo de Produto...</option>
-        <option value="fruta">Fruta</option>
-        <option value="alimento">Alimento</option>
-        <option value="bebida">Bebida</option>
-        <option value="higiene pessoal">Higiene Pessoal</option>
-        <option value="limpeza">Limpeza</option>
-        <option value="roupas">Roupas</option>
-        <option value="calcados">Calçados</option>
-        <option value="outros">Outros</option>
-    </select>
+            <input type="button" class="btn btn-success mt-2" value="Cadastrar" *ngIf="btnCadastro" (click)="cadastrar()">
+            <input type="button" class="btn btn-warning mx-1 mt-2" value="Alterar" *ngIf="!btnCadastro" (click)="editar()">
+            <input type="button" class="btn btn-danger mx-1 mt-2" value="Remover" *ngIf="!btnCadastro" (click)="confirmaExclusao()">
+            <input type="button" class="btn btn-secondary mx-1 mt-2" value="Cancelar" *ngIf="!btnCadastro" (click)="cancelar()">
+        </div>
+    </form>
 
-    <input type="button" class="btn btn-success" value="Cadastrar" *ngIf="btnCadastro" (click)="cadastrar()">
-    <input type="button" class="btn btn-warning" value="Alterar" *ngIf="!btnCadastro" (click)="editar()">
-    <input type="button" class="btn btn-danger" value="Remover" *ngIf="!btnCadastro" (click)="confirmaExclusao()">
-    <input type="button" class="btn btn-secondary" value="Cancelar" *ngIf="!btnCadastro" (click)="cancelar()">
-</form>
+    <table class="table justify-content-center align-items-center h-auto w-100" *ngIf="tabelaProdutos">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Medida</th>
+                <th>Entrega</th>
+                <th>Tipo</th>
+                <th>Selecionar</th>
+            </tr>
+        </thead>
+        <tbody> 
+            <tr *ngFor="let p of produtos; index as i">
+                <td>{{i+1}}</td>
+                <td>{{p.nome}}</td>
+                <td>{{p.medida}}</td>
+                <td>{{p.formaEntrega}}</td>
+                <td>{{p.tipo}}</td>
+                <td><button class="btn btn-primary" (click)="selecionarProduto(i)">Selecionar</button></td>
+            </tr>
+        </tbody>
+    </table>
 
-<table class="table" *ngIf="tabelaProdutos">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>Nome</th>
-            <th>Medida</th>
-            <th>Entrega</th>
-            <th>Tipo</th>
-            <th>Selecionar</th>
-        </tr>
-    </thead>
-    <tbody> 
-        <tr *ngFor="let p of produtos; index as i">
-            <td>{{i+1}}</td>
-            <td>{{p.nome}}</td>
-            <td>{{p.medida}}</td>
-            <td>{{p.formaEntrega}}</td>
-            <td>{{p.tipo}}</td>
-            <td><button class="btn btn-primary" (click)="selecionarProduto(i)">Selecionar</button></td>
-        </tr>
-    </tbody>
-</table>
-
-<div *ngIf="contCadastros">
-    <h5 class="contagem">Total de cadastros: #</h5>
+    <div *ngIf="contCadastros" class="mb-5">
+        <h5 class="contagem">Total de cadastros: #</h5>
+    </div>
 </div>

@@ -1,36 +1,7 @@
-body{
-    margin-left: 50%;
-}
-
 img{
-    width: 250px;
-    margin-bottom: 30px;
-
-}
-
-form{
-    width: 500px;
-    margin: 30px auto;
-    text-align: center;
-}
-
-input{
-    margin-bottom: 5px;
+    width: 10vw;
 }
 
 input[type="button"]{
-    margin-right: 5px;
-}
-
-select{
-    margin-bottom: 5px;
-}
-
-table{
-    margin: 5% auto 10% 2%;
-}
-
-.contagem{
-    margin-bottom: 2%;
-    margin-left: 2%;
+    width: 20%;
 }
