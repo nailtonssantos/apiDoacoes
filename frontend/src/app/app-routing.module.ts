@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ProdutoComponent } from './principal/produto.component';
+import { ProdutoComponent } from './pages/produtos/produto.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { Error404Component } from './pages/error404/error404.component';
