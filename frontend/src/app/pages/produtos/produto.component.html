@@ -1,7 +1,7 @@
-<div class="container-lg flex-row mx-lg-5 justify-content-center align-items-center row">
+<div class="container my-5 my-md-5 my-lg-5 flex-row mx-lg-5 w-100 h-auto justify-content-center align-items-center row mb-lg-5">
+    <img src="assets/cesta-de-produtos.png" class="mb-2 w-25 my-5">
     <form class="mx-5 me-xxl-5 justify-content-center align-items-center row">
         <div class="w-50 justify-content-center align-items-center row">
-            <img src="assets/cesta-de-produtos.png" class="mb-2">
             <input type="text" class="form-control mb-1" placeholder="Nome do Produto" name="nome" [(ngModel)]="produto.nome">
             <select class="form-select mb-1" id="medida" name="medida" [(ngModel)]="produto.medida">
                 <option value="" disabled selected>Unidade de Medida...</option>
@@ -28,7 +28,8 @@
                 <option value="calcados">Calçados</option>
                 <option value="outros">Outros</option>
             </select>
-
+        </div>
+        <div class="justify-content-center align-items-center row">
             <input type="button" class="btn btn-success mt-2" value="Cadastrar" *ngIf="btnCadastro" (click)="cadastrar()">
             <input type="button" class="btn btn-warning mx-1 mt-2" value="Alterar" *ngIf="!btnCadastro" (click)="editar()">
             <input type="button" class="btn btn-danger mx-1 mt-2" value="Remover" *ngIf="!btnCadastro" (click)="confirmaExclusao()">
@@ -36,7 +37,7 @@
         </div>
     </form>
 
-    <table class="table justify-content-center align-items-center h-auto w-100" *ngIf="tabelaProdutos">
+    <table class="table justify-content-center align-items-center my-5" *ngIf="tabelaProdutos">
         <thead>
             <tr>
                 <th>#</th>

@@ -1,8 +1,9 @@
-img{
+input[type="button"]{
     width: 10vw;
+    min-width: 10vw;
 }
 
-input[type="button"]{
-    width: 20%;
-    min-width: 20%;
+table{
+    margin-left: 10vw;
+    position:relative;
 }
