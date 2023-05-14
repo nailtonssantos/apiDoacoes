@@ -15,7 +15,7 @@ Sistema de doações
 - Spring boot
 - Sprng Data
 - Spring Security
-- React
+- Angular
 - Bootstrap
 - Html
 - CSS
