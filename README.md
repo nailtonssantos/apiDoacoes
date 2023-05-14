@@ -20,3 +20,9 @@ Sistema de doações
 - Html
 - CSS
 - MySQL
+
+
+Instalações:
+
+npm install bootstrap
+npm install bootstrap-icons
