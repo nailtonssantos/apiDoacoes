@@ -12,7 +12,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { Error404Component } from './pages/error404/error404.component';
 import { LoginComponent } from './pages/login/login.component';
 import { FooterComponent } from './pages/footer/footer.component';
-import { HeaderComponent } from './pages/header/header.component';
+import { NavComponent } from './pages/nav/nav.component';
 
 
 @NgModule({
@@ -24,7 +24,7 @@ import { HeaderComponent } from './pages/header/header.component';
     Error404Component,
     LoginComponent,
     FooterComponent,
-    HeaderComponent
+    NavComponent
   ],
   imports: [
     BrowserModule,
