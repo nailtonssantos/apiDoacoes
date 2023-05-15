@@ -1,6 +1,6 @@
-<div class="container my-5 my-md-5 my-lg-5 flex-row mx-lg-5 justify-content-center align-items-center row mb-lg-5">
+<div class="container d-flex wrapper flex-column justify-content-center align-items-center row mb-lg-5">
     <img src="assets/cesta-de-produtos.png" class="mb-2 w-25 my-5">
-    <form class="mx-5 me-xxl-5 justify-content-center align-items-center row">
+    <form class="justify-content-center align-items-center row">
         <div class="w-50 justify-content-center align-items-center row">
             <input type="text" class="form-control mb-1" placeholder="Nome do Produto" name="nome" [(ngModel)]="produto.nome">
             <select class="form-select mb-1" id="medida" name="medida" [(ngModel)]="produto.medida">
@@ -64,5 +64,3 @@
         <h5 class="contagem">Total de cadastros: #</h5>
     </div>
 </div>
-
-<app-footer></app-footer>

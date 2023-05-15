@@ -1,9 +1,10 @@
-Login:
-<br>
-<input type="text" value="Mickey">
-<br> Password:
-<br>
-<input type="password" value="Mouse">
-<br>
-<br>
-<button (click)="LogOn()">Enviar</button>
+<div class="container wrapper m-5 justify-content-center align-items-baseline row" >
+    <form class="form form-control w-50 justify-content-center align-items-center">
+    <h3 class="text-center">Acesso ao Sistema</h3>
+    <label>Login</label>
+    <input type="text" class="form form-control m-1" value="Mickey">
+    <label>Password</label>
+    <input type="password" class="form form-control m-1" value="Mouse">
+    <input type="button" value="Enviar" class="btn btn-success" (click)="LogOn()"/>
+    </form>
+</div>

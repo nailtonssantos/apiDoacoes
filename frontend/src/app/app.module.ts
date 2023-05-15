@@ -8,11 +8,14 @@ import { ProdutoComponent } from './pages/produtos/produto.component';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './pages/home/home.component';
-import { AboutComponent } from './pages/about/about.component';
 import { Error404Component } from './pages/error404/error404.component';
 import { LoginComponent } from './pages/login/login.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { NavComponent } from './pages/nav/nav.component';
+import { PrivacityComponent } from './pages/privacity/privacity.component';
+import { TermsComponent } from './pages/terms/terms.component';
+import { AboutComponent } from './pages/about/about.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 
 @NgModule({
@@ -20,11 +23,14 @@ import { NavComponent } from './pages/nav/nav.component';
     AppComponent,
     ProdutoComponent,
     HomeComponent,
-    AboutComponent,
     Error404Component,
     LoginComponent,
     FooterComponent,
-    NavComponent
+    NavComponent,
+    PrivacityComponent,
+    TermsComponent,
+    AboutComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
