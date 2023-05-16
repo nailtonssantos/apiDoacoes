@@ -9,12 +9,12 @@ import { PrivacityComponent } from './pages/privacity/privacity.component';
 import { TermsComponent } from './pages/terms/terms.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
+//import { AuthGuard } from './service/auth/auth.guard';
 
 
 const routes: Routes = [
   { 
-    path: 'produtos', component: ProdutoComponent,
-    
+    path: 'produtos', component: ProdutoComponent
   },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
