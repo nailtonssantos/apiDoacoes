@@ -12,7 +12,10 @@ import { ContactComponent } from './pages/contact/contact.component';
 
 
 const routes: Routes = [
-  { path: 'produtos', component: ProdutoComponent },
+  { 
+    path: 'produtos', component: ProdutoComponent,
+    
+  },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'privacity', component: PrivacityComponent },
