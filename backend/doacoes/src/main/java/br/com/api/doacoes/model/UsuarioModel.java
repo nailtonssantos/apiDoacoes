@@ -30,7 +30,7 @@ public class UsuarioModel {
 	@Column (name = "senha", nullable = false)
 	private String senha;
 	
-	@Column(name = "tipoUsuario")
+	@Column(name = "tipo")
 	private String tipoUsuario;
 
 	@Column(name = "ativo", nullable = false)
